@@ -30,10 +30,7 @@ public class User {
     private State state;
     //@OneToMany(mappedBy = "owner")
     ///private List<Car> cars;
-    public static User from(UserForm form) {
-        return User.builder()
-                .firstName(form.getFirstName())
-                .lastName(form.getLastName())
-                .build();
-    }
+    @OneToMany(mappedBy = "user")
+    private List<Token> tokens;
+
 }
