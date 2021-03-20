@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class SignUpServiceImpl implements SignUpService {
     @Autowired
@@ -32,4 +34,15 @@ public class SignUpServiceImpl implements SignUpService {
 
         usersRepository.save(user);
     }
+
+    @Override
+    public List<User> findAll() {
+        return usersRepository.findAll();
+    }
+
+    @Override
+    public User findOne(Long userId) {
+        return usersRepository.findOne(userId);
+    }
+
 }
