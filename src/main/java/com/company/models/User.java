@@ -1,5 +1,6 @@
 package com.company.models;
 
+import com.company.forms.UserForm;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -29,10 +30,10 @@ public class User {
     private State state;
     //@OneToMany(mappedBy = "owner")
     ///private List<Car> cars;
-   /* public static User from(UserForm form) {
+    public static User from(UserForm form) {
         return User.builder()
                 .firstName(form.getFirstName())
                 .lastName(form.getLastName())
                 .build();
-    }*/
+    }
 }
